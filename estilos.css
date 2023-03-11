@@ -1,32 +1,34 @@
 .header{
         background: green;
         height: 60px;
+        grid-area: header;
 }
+
 .wrapper{
     max-width: 1000px;
     margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+     "header header header header "
+     "menu content content content"
+     "footer footer footer footer";
 }
-.container{
-    background: red;
-    display: flex;
-    height: 60px;
-    align-items: center;
-    flex-direction: column;
-}
+
 .menu{
     text-align: center;
     background: blue;
-    width: 20%;
-   
-    
+    grid-area: menu;
 }
+
 .content{
     text-align: center;
     background: violet;
-    width: 80%;
+    grid-area: content;
 }
+
 .footer{
     clear: both;
     background: orange;
     height: 30px;
+    grid-area: footer;
 }
